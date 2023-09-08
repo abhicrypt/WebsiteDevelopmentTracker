@@ -106,10 +106,14 @@ export default function MiniDrawer() {
 
   return (
     <Box sx={{ display: 'flex' }}>
+      
       <CssBaseline />
+      
       <AppBar position="fixed" open={open}>
+      
         <Toolbar>
-          <IconButton
+        <Modalss/>
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
@@ -120,8 +124,8 @@ export default function MiniDrawer() {
             }}
           >
             <MenuIcon />
-          </IconButton>
-          <Modalss/>
+          </IconButton> */}
+          
           {/* <Typography variant="h6" noWrap component="div">
             
           </Typography> */}

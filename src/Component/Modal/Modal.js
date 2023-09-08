@@ -35,11 +35,11 @@ function App() {
             Add Task
           </Button>
         </Grid>
-        {tasks.map((task) => (
+        {/* {tasks.map((task) => (
           <Grid item xs={12} key={task.id}>
             <TaskCard task={task} />
           </Grid>
-        ))}
+        ))} */}
       </Grid>
       <TaskForm open={open} handleClose={() => setOpen(false)} addTask={handleAddTask} />
     </Container>

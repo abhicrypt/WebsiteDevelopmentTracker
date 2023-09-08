@@ -2,7 +2,19 @@
 import React, { useState } from 'react';
 import { Button, TextField, RadioGroup, Radio, FormControlLabel, FormControl, FormLabel, Modal } from '@mui/material';
 import { Add as AddIcon } from '@mui/icons-material';
+import Box from '@mui/material/Box';
 
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 450,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
 const TaskForm = ({ open, handleClose, addTask }) => {
   const [description, setDescription] = useState('');
   const [status, setStatus] = useState('todo');
@@ -21,6 +33,7 @@ const TaskForm = ({ open, handleClose, addTask }) => {
 
   return (
     <Modal open={open} onClose={handleClose}>
+        <Box sx={style}>
       <div className="modal">
         <h2>Add Task</h2>
         <TextField
@@ -39,7 +52,7 @@ const TaskForm = ({ open, handleClose, addTask }) => {
           </RadioGroup>
         </FormControl>
         <TextField
-          label="Due Date"
+          label=""
           type="date"
           fullWidth
           variant="outlined"
@@ -56,6 +69,7 @@ const TaskForm = ({ open, handleClose, addTask }) => {
           Add Task
         </Button>
       </div>
+      </Box>
     </Modal>
   );
 };
